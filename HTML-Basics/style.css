@@ -1,0 +1,17 @@
+.bcolor{
+    /* selected by class  used by all the elements of class*/
+
+    border:red;
+    padding: 10%;
+    background-color: rgb(173, 126, 172);
+}
+h2{
+    /* selected by tag  used by all the tags*/
+    background-color: darkgrey;
+    color: black;
+}
+#appId{
+    /* selected by ID  used by specific id's*/
+    background-color: rgb(94, 133, 133);
+    color: gold;
+}
