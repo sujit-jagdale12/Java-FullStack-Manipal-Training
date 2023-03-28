@@ -15,3 +15,25 @@ h2{
     background-color: rgb(94, 133, 133);
     color: gold;
 }
+nav {
+    background-color: rgb(12, 2, 0);
+    height: 50px;
+    color: white;
+}
+.nav-item {
+    color: rgb(216, 202, 202);
+    font-size: large;
+}
+
+#hmIc {
+    padding-top: 1%;
+    width: 30px;
+    height: 30px;
+}
+.box{
+    background-color: rgb(180, 166, 149);
+    width: 200px;
+    border: 15px rgb(227, 17, 17);
+    padding: 20px;
+    margin: 20px ;
+}
