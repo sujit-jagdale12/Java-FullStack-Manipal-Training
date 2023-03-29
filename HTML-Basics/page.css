@@ -1,6 +1,47 @@
 html,
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    height: 90vh;
+}
+header{
+    width: 100%;
+    height: 50px;
 }
 
+nav {
+    background-color: cadetblue;
+    height: 100%;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-ic {
+    width: 30px;
+    height: 30px;
+    margin: 16px;
+}
+.menu-container {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.ad-content {
+    flex: 7;
+    /* background-color: blanchedalmond; */
+    border: 1px solid black;
+ }
+ 
+ .login-content {
+      flex:3;
+      /* background-color: darkslategrey; */
+      border: 1px solid black;
+ }
