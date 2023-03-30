@@ -82,6 +82,8 @@ function createNewCard(cardData) {
     return cardContainer
 }
 
-updateDateTime()
+updateDateTime(){
+    
+}
 // setCardDetails()
 showAllCards()
