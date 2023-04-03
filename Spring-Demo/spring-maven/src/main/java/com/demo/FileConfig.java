@@ -8,6 +8,10 @@ public class FileConfig {
     public FileUtil getUtil() {
         return new FileUtil();
     }
+    @Bean
+    public FileUtil getUtil1() {
+        return new FileUtil();
+    }
 
     @Bean
     public FileDemo getFileDemo() {

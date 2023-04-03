@@ -38,14 +38,15 @@ public class App {
         System.out.println("🔥 Providing Dependencies With Annotation Config 🔥");
         ApplicationContext ctx = new AnnotationConfigApplicationContext(XlConfig.class, FileConfig.class);
 
-        String[] names = ctx.getBeanDefinitionNames();
-        System.out.println(Arrays.toString(names));
+
+        // String[] names = ctx.getBeanDefinitionNames();
+        // System.out.println(Arrays.toString(names));
     }
 
     public static void main(String[] args) {
         simpleSpring();
-        springXmlConfig();
-        springConfig();
-        withSpringAnnotationConfig();
+        // springXmlConfig();
+        // springConfig();
+        // withSpringAnnotationConfig();
     }
 }
