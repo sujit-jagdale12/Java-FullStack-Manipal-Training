@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/req")
 public class ReqController {
-    @GetMapping("/") // http://localhost:8080/req/
+    @GetMapping("/img") // http://localhost:8080/req/
     // @RequestMapping(method = RequestMethod.GET)
     public String getImage() {
         return "hi";
@@ -22,15 +22,15 @@ public class ReqController {
         return "success";
     }
 
-    // @PutMapping("/update") // http://localhost:8080/req/update
-    // // @RequestMapping(method = RequestMethod.PUT)
-    // public String updateImage() {
-    //     return "success";
-    // }
+    @PutMapping("/update") // http://localhost:8080/req/update
+    // @RequestMapping(method = RequestMethod.PUT)
+    public String updateImage() {
+        return "success";
+    }
 
-    // @DeleteMapping("/delete") // http://localhost:8080/req/delete
-    // // @RequestMapping(method = RequestMethod.DELETE)
-    // public String deleteImage() {
-    //     return "success";
-    // }
+    @DeleteMapping("/delete") // http://localhost:8080/req/delete
+    // @RequestMapping(method = RequestMethod.DELETE)
+    public String deleteImage() {
+        return "success";
+    }
 }
