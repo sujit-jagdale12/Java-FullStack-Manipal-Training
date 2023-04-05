@@ -1,0 +1,9 @@
+Get http://localhost:8080/weather/sunday
+
+###
+Post http://localhost:8080/weather/save HTTP/1.1 content-type: application/json
+{
+    "temp":23
+}
+
+###
