@@ -6,7 +6,7 @@ POST http://localhost:8080/item/ HTTP/1.1
 content-type: application/json
 
 {
-"id" : 1, "name" : "Sujit", "brand" : "Nike", "price" : 55.78
+"id" : 1, "name" : "Don", "brand" : "Nike", "price" : 2545.78
 }
 
 ###
