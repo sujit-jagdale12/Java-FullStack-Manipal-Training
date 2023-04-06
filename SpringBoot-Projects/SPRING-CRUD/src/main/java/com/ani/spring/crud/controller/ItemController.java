@@ -28,36 +28,35 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
-    @PostMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ResponseEntity<AppRes> save(@RequestBody Item item) {
         itemService.create(item);
         AppRes res = AppRes.builder().res("Add").msg("New Item Added").build();
-        return ResponseEntity.status(HttpStatus.CREATED ).body(res);
+        return ResponseEntity.status(HttpStatus.CREATED).body(res);
     }
 
     @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody ResponseEntity<List<AppRes>> read() {
-        itemService.readAll();
-       List<AppRes> items=new ArrayList<>();
+    public @ResponseBody ResponseEntity<List<Item>> read() {
+        List<Item> items = itemService.readAll();
         return ResponseEntity.status(HttpStatus.OK).body(items);
     }
 
-   @PutMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ResponseEntity<AppRes> update(@RequestBody Item item) {
         itemService.update(item);
         AppRes res = AppRes.builder()
-                            .res("Update")
-                            .msg("Item Updated")
-                            .build();
+                .res("Update")
+                .msg("Item Updated")
+                .build();
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(res);
     }
+
     @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ResponseEntity<AppRes> delete(@PathVariable Long id) {
         itemService.delete(id);
         AppRes res = AppRes.builder().res("Delete").msg("Item Deleted").build();
         return ResponseEntity.status(HttpStatus.OK).body(res);
     }
-
 
 }
