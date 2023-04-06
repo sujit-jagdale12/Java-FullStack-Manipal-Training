@@ -1,4 +1,4 @@
-Get http://localhost:8080/weather/sunday
+Get http://localhost:8080/weather/ads
 
 ###
 Post http://localhost:8080/weather/save HTTP/1.1 content-type: application/json

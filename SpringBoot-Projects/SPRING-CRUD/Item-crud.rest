@@ -1,0 +1,29 @@
+GET http://localhost:8080/item/
+
+###
+
+POST http://localhost:8080/item/ HTTP/1.1
+content-type: application/json
+
+{
+"id" : 1, "name" : "Sujit", "brand" : "Nike", "price" : 55.78
+}
+
+###
+
+PUT http://localhost:8080/item/ HTTP/1.1
+
+content-type: application/json
+{
+"id" : 1, "name" : "Sanku", "brand" : "Puma", "price" : 5767.67
+}
+
+###
+
+DELETE http://localhost:8080/item/1 HTTP/1.1 
+
+content-type: application/json
+
+{
+"id" : 1, "name" : "Sanku", "brand" : "Puma", "price" : 5767.67
+}
