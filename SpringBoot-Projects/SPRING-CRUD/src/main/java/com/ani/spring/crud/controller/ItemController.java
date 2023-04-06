@@ -46,7 +46,7 @@ public class ItemController {
     public @ResponseBody ResponseEntity<AppRes> update(@RequestBody Item item) {
         itemService.update(item);
         AppRes res = AppRes.builder()
-                            .res("success")
+                            .res("Update")
                             .msg("Item Updated")
                             .build();
 
