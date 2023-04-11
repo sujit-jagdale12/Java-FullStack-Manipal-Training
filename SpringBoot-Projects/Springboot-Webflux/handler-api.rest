@@ -1,0 +1,23 @@
+POST http://localhost:8080/handler/ HTTP/1.1 
+Content-Type: application/json
+
+{
+"id": 12, "name": "aaa", "brand": "rty", "price": 89
+}
+
+### Get All 
+
+GET http://localhost:8080/handler/ HTTP/1.1
+
+### Update the item 
+
+PUT http://localhost:8080/handler/ HTTP/1.1 
+Content-Type: application/json
+
+{
+"id": 12, "name": "bbb", "brand": "iop", "price": 11.11
+}
+
+### Delete 
+
+DELETE http://localhost:8080/handler/12 HTTP/1.1
