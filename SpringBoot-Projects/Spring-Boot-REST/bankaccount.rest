@@ -1,0 +1,10 @@
+Get http://localhost:8080/accounts/
+
+
+### 
+POST http://localhost:8080/accounts/ HTTP/1.1 
+content-type: application/json
+
+{
+"id" : 101, "owner" : "don", "balance" : 501
+}
