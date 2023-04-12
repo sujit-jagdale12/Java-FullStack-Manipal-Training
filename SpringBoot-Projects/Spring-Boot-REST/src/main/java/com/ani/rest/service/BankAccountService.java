@@ -8,4 +8,8 @@ public interface BankAccountService {
     Integer createNewAccount(BankAccountDto account);
 
     Collection<BankAccountDto> listAllAccounts();
+
+    Integer deleteAccount(Long id);
+
+    Integer updateAccount(BankAccountDto requestDto);
 }

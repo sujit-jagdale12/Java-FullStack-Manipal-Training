@@ -33,4 +33,16 @@ public class BankAccountServiceImpl implements BankAccountService{
                            .map(converter::toDto)
                            .collect(Collectors.toList());
     }
+
+    @Override
+    public Integer deleteAccount(Long id) {
+        repository.deleteId(id);
+        return 1;
+    }
+
+    @Override
+    public Integer updateAccount(BankAccountDto requestDto) {
+        repository.update(converter.toDomain(requestDto));
+        return 1;
+    }
 }

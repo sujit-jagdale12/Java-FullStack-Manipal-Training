@@ -8,4 +8,8 @@ public interface BankAccountRepo {
     BankAccount save(BankAccount account);
 
     Collection<BankAccount> findAll();
+
+    void deleteId(Long id);
+
+    void update(BankAccount domain);
 }

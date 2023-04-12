@@ -21,4 +21,14 @@ public class BankAccountRepoImpl implements BankAccountRepo {
     public Collection<BankAccount> findAll() {
        return accounts.values();
     }
+
+    @Override
+    public void deleteId(Long id) {
+        accounts.remove(id);
+    }
+
+    @Override
+    public void update(BankAccount domain) {
+        accounts.put(domain.getId(), domain);
+    }
 }

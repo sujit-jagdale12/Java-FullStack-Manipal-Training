@@ -6,5 +6,17 @@ POST http://localhost:8080/accounts/ HTTP/1.1
 content-type: application/json
 
 {
-"id" : 101, "owner" : "don", "balance" : 501
+"id" : 1, "owner" : "don", "balance" : 501
+}
+
+###
+Delete http://localhost:8080/accounts/1
+
+###
+
+PUT http://localhost:8080/accounts/ HTTP/1.1 
+content-type: application/json
+
+{
+    "id" : 1, "owner" : "Sujit", "balance" : 101
 }
