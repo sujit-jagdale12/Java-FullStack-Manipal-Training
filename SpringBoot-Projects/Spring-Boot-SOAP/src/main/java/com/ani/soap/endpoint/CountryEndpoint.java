@@ -11,7 +11,7 @@ import com.ani.soap.gen.GetCountryRequest;
 import com.ani.soap.gen.GetCountryResponse;
 
 @Endpoint
-public class CountryEndPoint {
+public class CountryEndpoint {
     
     private static final String NAMESPACE_URI = "http://soap.ani.com/gen";
 
