@@ -10,12 +10,14 @@ import org.springframework.boot.json.JsonParserFactory;
 import org.springframework.stereotype.Component;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 @Component
 public class JsonDemo {
 
     private final JsonParser parser = JsonParserFactory.getJsonParser();
-    private final Gson gson = new Gson();
+    // private final Gson gson = new Gson();
+    private final Gson gson = new GsonBuilder().setPrettyPrinting().create();   // IN proper json format
     
     public Config toDomain(String path) throws IOException {
 
@@ -24,14 +26,12 @@ public class JsonDemo {
         String json = new String(data);
         System.out.println(json);
 
-        Map<String, Object> map = parser.parseMap(new String(data));
+        // Map<String, Object> map = parser.parseMap(new String(data));
 
-       Config cfg = gson.fromJson(json, Config.class);
-       
-        return cfg;
+       return gson.fromJson(json, Config.class);
     }
 
     public String toJson(Config cfg) {
-        return null;
+        return gson.toJson(cfg);
     }
 }

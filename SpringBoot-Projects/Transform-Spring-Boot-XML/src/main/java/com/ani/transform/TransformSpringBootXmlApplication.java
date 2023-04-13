@@ -13,19 +13,17 @@ import org.springframework.context.ApplicationContext;
 import com.ani.transform.domain.Author;
 import com.ani.transform.domain.Book;
 import com.ani.transform.domain.Publisher;
+import com.ani.transform.json.Config;
+import com.ani.transform.json.JsonDemo;
 import com.ani.transform.xml.Converter;
 
 
 @SpringBootApplication
 public class TransformSpringBootXmlApplication {
 
-	public static void main(String[] args) throws JAXBException, IOException {
-
-		ApplicationContext ctx = SpringApplication.run(TransformSpringBootXmlApplication.class, args);
-
+	public static void demo1(ApplicationContext ctx) throws JAXBException, IOException {
 
 		Converter converter = ctx.getBean(Converter.class);
-
 
 		Author author = new Author();
 		author.setFirstName("abc");
@@ -53,6 +51,15 @@ public class TransformSpringBootXmlApplication {
 		Resource res = new ClassPathResource("book.xml");
 		Book bk = converter.toDomain(res.getFile());
 		System.out.println(bk);
+	}
+
+	public static void main(String[] args) throws IOException  {
+		ApplicationContext ctx = SpringApplication.run(TransformSpringBootXmlApplication.class, args);
+
+		JsonDemo jd =  ctx.getBean(JsonDemo.class);
+		Config cfg = jd.toDomain(new ClassPathResource("demo.json").getFile().getAbsolutePath());
+		System.out.println(cfg);
+
 	}
 
 }
