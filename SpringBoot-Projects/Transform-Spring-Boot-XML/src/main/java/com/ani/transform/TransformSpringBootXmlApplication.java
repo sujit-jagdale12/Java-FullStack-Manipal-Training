@@ -14,7 +14,7 @@ import com.ani.transform.domain.Author;
 import com.ani.transform.domain.Book;
 import com.ani.transform.domain.Publisher;
 import com.ani.transform.json.Config;
-import com.ani.transform.json.JsonDemo;
+import com.ani.transform.json.JsonConverter;
 import com.ani.transform.xml.Converter;
 
 
@@ -56,7 +56,7 @@ public class TransformSpringBootXmlApplication {
 	public static void main(String[] args) throws IOException  {
 		ApplicationContext ctx = SpringApplication.run(TransformSpringBootXmlApplication.class, args);
 
-		JsonDemo jd =  ctx.getBean(JsonDemo.class);
+		JsonConverter jd =  ctx.getBean(JsonConverter.class);
 		Config cfg = jd.toDomain(new ClassPathResource("demo.json").getFile().getAbsolutePath());
 		System.out.println(cfg);
 

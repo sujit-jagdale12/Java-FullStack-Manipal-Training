@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 @Component
-public class JsonDemo {
+public class JsonConverter{
 
     private final JsonParser parser = JsonParserFactory.getJsonParser();
     // private final Gson gson = new Gson();
