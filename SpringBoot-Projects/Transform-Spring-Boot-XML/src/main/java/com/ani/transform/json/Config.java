@@ -26,4 +26,7 @@ public class Config {
 
     @SerializedName("max_users")
     private Integer maxUsers;
+    
+    @SerializedName("email_settings")
+    private EmailSettings emailSettings;
 }

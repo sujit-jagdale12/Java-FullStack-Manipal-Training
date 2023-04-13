@@ -14,6 +14,7 @@ import com.ani.transform.domain.Author;
 import com.ani.transform.domain.Book;
 import com.ani.transform.domain.Publisher;
 import com.ani.transform.json.Config;
+import com.ani.transform.json.EmailSettings;
 import com.ani.transform.json.JsonConverter;
 import com.ani.transform.xml.Converter;
 
@@ -58,7 +59,12 @@ public class TransformSpringBootXmlApplication {
 
 		JsonConverter jd =  ctx.getBean(JsonConverter.class);
 		Config cfg = jd.toDomain(new ClassPathResource("demo.json").getFile().getAbsolutePath());
-		System.out.println(cfg);
+		System.out.println("Printing above Json to JAVA\n"+cfg);
+
+
+		EmailSettings emailSettings=new EmailSettings("localhost://", "5050");
+		Config config = new Config("Snap", "3.2.1", true, 1234,emailSettings);
+		System.out.println("\n------------------\n"+config+"\nPrinting above JAVA to Json\n"+jd.toJson(config));
 
 	}
 
