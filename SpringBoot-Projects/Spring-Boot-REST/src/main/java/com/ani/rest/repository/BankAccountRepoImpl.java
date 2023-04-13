@@ -23,8 +23,9 @@ public class BankAccountRepoImpl implements BankAccountRepo {
     }
 
     @Override
-    public void deleteId(Long id) {
+    public Integer deleteId(Long id) {
         accounts.remove(id);
+        return 1;
     }
 
     @Override

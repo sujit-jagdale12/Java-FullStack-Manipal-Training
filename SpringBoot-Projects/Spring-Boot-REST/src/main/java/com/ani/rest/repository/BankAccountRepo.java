@@ -9,7 +9,7 @@ public interface BankAccountRepo {
 
     Collection<BankAccount> findAll();
 
-    void deleteId(Long id);
+    Integer deleteId(Long id);
 
     void update(BankAccount domain);
 }
