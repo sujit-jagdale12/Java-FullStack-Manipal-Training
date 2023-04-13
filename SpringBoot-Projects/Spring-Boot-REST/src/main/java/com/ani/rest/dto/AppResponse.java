@@ -1,5 +1,6 @@
 package com.ani.rest.dto;
 
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,4 +12,5 @@ public class AppResponse<T> {
     private String sts;
     private String msg;
     private T bd;
+
 }

@@ -22,14 +22,11 @@ public class BankController {
 
     private final BankAccountService service;
 
+
     @GetMapping(value = "/")
     public ResponseEntity<BankAccountDto> createAccount(){
         return ResponseEntity.status(HttpStatus.OK).body(new BankAccountDto(12l, "Sujit jagdale", 103.67));
     }
-
-
-
-
     
     @GetMapping(value = "/hadeoaslinks")
     public EntityModel<AppResponse<String>> accountDetails2() {
