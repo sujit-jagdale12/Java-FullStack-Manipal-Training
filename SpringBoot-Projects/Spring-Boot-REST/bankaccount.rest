@@ -6,7 +6,7 @@ POST http://localhost:8080/accounts/ HTTP/1.1
 content-type: application/json
 
 {
-"id" : 1, "owner" : "don", "balance" : 501
+"id" : 3, "owner" : "dfhhff", "balance" : 56.89
 }
 
 ###
