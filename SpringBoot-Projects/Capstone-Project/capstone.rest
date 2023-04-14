@@ -1,0 +1,23 @@
+GET  http://localhost:8080/invoice/
+
+###
+
+POST http://localhost:8080/invoice/ HTTP/1.1 
+content-type: application/json
+
+{
+"id" : 1, "client" : "sujit", "invDt" : "2020-01-01", "amt" : 98
+}
+
+###
+
+PUT http://localhost:8080/invoice/ HTTP/1.1 
+content-type: application/json
+
+{
+"id" : 1, "client" : "SUJIT", "invDt" : "2020-01-01", "amt" : 1001
+}
+
+###
+
+DELETE  http://localhost:8080/invoice/1
