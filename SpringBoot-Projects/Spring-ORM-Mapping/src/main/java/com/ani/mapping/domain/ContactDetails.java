@@ -4,9 +4,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+import javax.persistence.Id;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,15 +14,15 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-public class IdentityDoc {
-
+public class ContactDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long docId;
-    private String type;
-    private Boolean isActive;
+    private Long id;
+    private String mobile;
+    private String email;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "person_id")
     private Person person;
+
 }
