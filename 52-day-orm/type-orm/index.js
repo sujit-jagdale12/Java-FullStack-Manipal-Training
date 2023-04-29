@@ -33,6 +33,12 @@ dataSource.initialize().then(() => {
 
     // categoryRepository.delete(2).then(res => console.log(`✅ Deleted Successfully`)).catch(console.log)
 
+    categoryRepository.query('select * from categories')
+        .then(ctgs => console.log(ctgs))
+        .catch(console.log)
+
+    const categories = categoryRepository.createQueryBuilder('Category').where('Category.name like :nm', { nm: '%P%' })
+    categories.getMany().then(ctgs => console.log(ctgs))
 
 }).catch(error => {
     console.log("❌ Error: ", error)
